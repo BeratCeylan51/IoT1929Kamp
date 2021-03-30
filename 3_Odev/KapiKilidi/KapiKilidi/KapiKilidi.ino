@@ -59,10 +59,8 @@ void loop()
   {
     Serial.println(" Giris Basarili ! ");
     Serial.println(" Hos Geldiniz, Sn. Berat CEYLAN. İyi günler dileriz. ");
-     digitalWrite(alarmPin, HIGH);
      digitalWrite(yesilLed, HIGH);
       delay(500);
-    digitalWrite(alarmPin, LOW);
     digitalWrite(yesilLed, LOW);
     delay(1000);
     Serial.println(" Eglencenize bakin :) ");
@@ -74,22 +72,17 @@ void loop()
   else   {
     Serial.println(" Kart Tanimlanmadi ! ");
     Serial.println(" Giris Basarisiz. ");
-    digitalWrite(alarmPin, HIGH);
     digitalWrite(kirmiziLed, HIGH);
       delay(100);
-    digitalWrite(alarmPin, LOW);
     digitalWrite(kirmiziLed, LOW);
       delay(100);
-    digitalWrite(alarmPin, HIGH);
     digitalWrite(kirmiziLed, HIGH);
       delay(100);
-    digitalWrite(alarmPin, LOW);
+    digitalWrite(al
     digitalWrite(kirmiziLed, LOW);
       delay(100);
-    digitalWrite(alarmPin, HIGH);
     digitalWrite(kirmiziLed, HIGH);
       delay(100);
-    digitalWrite(alarmPin, LOW);
     digitalWrite(kirmiziLed, LOW);
       delay(100);
     
