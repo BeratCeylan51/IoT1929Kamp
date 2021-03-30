@@ -76,16 +76,5 @@ void loop()
       delay(100);
     digitalWrite(kirmiziLed, LOW);
       delay(100);
-    digitalWrite(kirmiziLed, HIGH);
-      delay(100);
-    digitalWrite(al
-    digitalWrite(kirmiziLed, LOW);
-      delay(100);
-    digitalWrite(kirmiziLed, HIGH);
-      delay(100);
-    digitalWrite(kirmiziLed, LOW);
-      delay(100);
-    
-    delay(3000);
   }
 } 
