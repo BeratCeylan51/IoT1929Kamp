@@ -24,12 +24,12 @@ void setup()
 
 void loop() 
 {
-  // Yeni kartlari tara
+  
   if ( ! mfrc522.PICC_IsNewCardPresent()) 
   {
     return;
   }
-  // Kart okundu ise
+  
   if ( ! mfrc522.PICC_ReadCardSerial()) 
   {
     return;
