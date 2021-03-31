@@ -1,13 +1,6 @@
-/*
- * NodeMCU RC522 RFID Kartlı Geçiş Sistemi
- * Mehmet SÜTCÜ <info@mehmetsutcu.com> 2018 
- * Çırak Dergisi
- * Konfigürasyon: NodeMCU 1.0(ESP-12E Module), 80 MHz(İsteğe bağlı 160 MHz), 
- * 921600 Upload Speed, Flash, 4M(3M SPIFFS), Erase Flash: Only Sketch (Kart sürümü 2.4.2)
- */
 
-#define SS_PIN 10 //SDA Pini
-#define RST_PIN 9
+#define SS_PIN D2
+#define RST_PIN  D1
 
 int yesilLed = D4;
 int kirmiziLed = D3;
