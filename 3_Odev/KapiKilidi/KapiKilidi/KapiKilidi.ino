@@ -53,9 +53,9 @@ void loop()
     Serial.println(" Giris Basarili ! ");
     Serial.println(" Hos Geldiniz, Sn. Berat CEYLAN. İyi günler dileriz. ");
      digitalWrite(yesilLed, HIGH);
-      delay(500);
+      delay(100);
     digitalWrite(yesilLed, LOW);
-    delay(1000);
+    delay(100);
     Serial.println(" Eglencenize bakin :) ");
     Serial.println();
     statuss = 1;
