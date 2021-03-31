@@ -68,6 +68,6 @@ void loop()
     digitalWrite(kirmiziLed, HIGH);
       delay(100);
     digitalWrite(kirmiziLed, LOW);
-      delay(200);
+      delay(100);
   }
 } 
