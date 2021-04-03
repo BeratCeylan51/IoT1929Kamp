@@ -1,13 +1,6 @@
-/*
- * NodeMCU RC522 RFID Kartlı Geçiş Sistemi
- * Mehmet SÜTCÜ <info@mehmetsutcu.com> 2018 
- * Çırak Dergisi
- * Konfigürasyon: NodeMCU 1.0(ESP-12E Module), 80 MHz(İsteğe bağlı 160 MHz), 
- * 921600 Upload Speed, Flash, 4M(3M SPIFFS), Erase Flash: Only Sketch (Kart sürümü 2.4.2)
- */
 
-#define SS_PIN 10 //SDA Pini
-#define RST_PIN 9
+#define SS_PIN D2
+#define RST_PIN  D1
 
 int yesilLed = D4;
 int kirmiziLed = D3;
@@ -31,12 +24,12 @@ void setup()
 
 void loop() 
 {
-  // Yeni kartlari tara
+  
   if ( ! mfrc522.PICC_IsNewCardPresent()) 
   {
     return;
   }
-  // Kart okundu ise
+  
   if ( ! mfrc522.PICC_ReadCardSerial()) 
   {
     return;
@@ -59,12 +52,10 @@ void loop()
   {
     Serial.println(" Giris Basarili ! ");
     Serial.println(" Hos Geldiniz, Sn. Berat CEYLAN. İyi günler dileriz. ");
-     digitalWrite(alarmPin, HIGH);
      digitalWrite(yesilLed, HIGH);
-      delay(500);
-    digitalWrite(alarmPin, LOW);
+      delay(100);
     digitalWrite(yesilLed, LOW);
-    delay(1000);
+    delay(100);
     Serial.println(" Eglencenize bakin :) ");
     Serial.println();
     statuss = 1;
@@ -74,25 +65,9 @@ void loop()
   else   {
     Serial.println(" Kart Tanimlanmadi ! ");
     Serial.println(" Giris Basarisiz. ");
-    digitalWrite(alarmPin, HIGH);
     digitalWrite(kirmiziLed, HIGH);
       delay(100);
-    digitalWrite(alarmPin, LOW);
     digitalWrite(kirmiziLed, LOW);
       delay(100);
-    digitalWrite(alarmPin, HIGH);
-    digitalWrite(kirmiziLed, HIGH);
-      delay(100);
-    digitalWrite(alarmPin, LOW);
-    digitalWrite(kirmiziLed, LOW);
-      delay(100);
-    digitalWrite(alarmPin, HIGH);
-    digitalWrite(kirmiziLed, HIGH);
-      delay(100);
-    digitalWrite(alarmPin, LOW);
-    digitalWrite(kirmiziLed, LOW);
-      delay(100);
-    
-    delay(3000);
   }
 } 
